@@ -151,3 +151,9 @@ sudo chown $USER:admin /usr/local/go
 echo "set -x GOPATH /usr/local/go" >> ~/.config/fish/config.fish
 git config --global ghq.root $GOPATH/src
 
+## すでにghqでpackageをインストールしていた場合は以下を行う
+cp -p ~/.ghq/* $GOPATH/src
+
+## VSC extentionでdockerを使った検証を行うためのマウント許可
+[docker]->[Preference]->[File Sharing]->[+]->[command + shift + G]->[/usr/local/go/src/]を追加->[Apply & Restart]
+
