@@ -9,8 +9,8 @@
 
 # BrewSetup
 brew install tmux vim git 
-brew install ghq htop ack
-brew install thefuck
+brew install ghq htop ack pstree
+brew install thefuck terraform
 
 ## install python
 brew install python
@@ -28,19 +28,19 @@ brew cask install wireshark
 brew cask install macdown
 brew cask install macpass
 
-### Need password
+## Need password
 brew cask install onedrive
 
 ## Window manupilate
 brew cask install shiftit
 [設定]->[セキュリティとプライバシー]->[アクセシビリティ]->[プライバシー]->[ShiftFitを追加]
 
-## Font
+# Font
 brew tap caskroom/fonts
 brew cask install font-inconsolata
 brew cask install font-hack-nerd-font
 
-### iterm2のフォントを変更
+## iterm2のフォントを変更
 [preference]->[profile]->[text]->[change font]->"Knack Regular Nerd Font Complete"
 
 #エラーとなった、Dockerとの相性か権限設定か
@@ -84,17 +84,23 @@ fisher z fzf done edc/bass omf/thefuck omf/theme-bobthefish done
 fisher install 0rax/fish-bd
 fisher edc/bass omf/thefuck omf/theme-bobthefish
 
-### Disable powerline fonts for bobthefish
+## Disable powerline fonts & enable nerd for bobthefish
 set -g theme_powerline_fonts no
+set -g theme_nerd_fonts yes
 
-### Ctrl + g でghqリポジトリの選択が可能に
+## Ctrl + g でghqリポジトリの選択が可能に
 fisher decors/fish-ghq
 
-# ghq get
+## enable docker completion for fish
+wget https://raw.githubusercontent.com/docker/cli/master/contrib/completion/fish/docker.fish -O ~/.config/fish/completions/docker.fish
+
+# ghq get sample
 ghq get 2ndquadrant-it/barman
 ghq get hashicorp/best-practices
 
-
+## embulk
+brew cask install caskroom/versions/java8
+brew install embulk 
 
 
 
