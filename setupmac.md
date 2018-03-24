@@ -4,6 +4,8 @@
 # caps lock keyをコマンドキーへ
 [設定]->[キーボード]->[修飾キー]->[CapsLockをCommandへ]
 
+# ズーム機能を有効
+[設定]->[アクセシビリティ]->[ズーム機能]->[キーボードショートカットを使ってズーム]
 
 # BrewSetup
 brew install tmux vim git 
@@ -23,15 +25,51 @@ brew tap caskroom/cask
 brew cask install iterm2 visual-studio-code
 brew cask install docker
 brew cask install wireshark
+brew cask install macdown
+brew cask install macpass
+
+### Need password
+brew cask install onedrive
+
+## Window manupilate
+brew cask install shiftit
+[設定]->[セキュリティとプライバシー]->[アクセシビリティ]->[プライバシー]->[ShiftFitを追加]
 
 ## Font
 brew tap caskroom/fonts
 brew cask install font-inconsolata
 brew cask install font-hack-nerd-font
 
+### iterm2のフォントを変更
+[preference]->[profile]->[text]->[change font]->"Knack Regular Nerd Font Complete"
 
 #エラーとなった、Dockerとの相性か権限設定か
 #brew cask install virtualbox
+
+# vim
+## install plugin manager
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+
+string trim "
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+call plug#end()
+
+map <C-n> :NERDTreeToggle<CR>
+" ~/.vimrc
+
+ln -s ~/.vimrc ~/.config/nvim/init.vim
+
 
 # fisher
 brew install fish
@@ -87,3 +125,6 @@ cd myrepo
 git clone git@github.com:morihaya/my-ansible-playbooks.git
 git clone git@github.com:morihaya/hoge-go.git
 
+
+# terraform
+brew install terraform
