@@ -80,9 +80,7 @@ chsh -s /usr/local/bin/fish
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 
 brew install fzf
-fisher z fzf done edc/bass omf/thefuck omf/theme-bobthefish done
-fisher install 0rax/fish-bd
-fisher edc/bass omf/thefuck omf/theme-bobthefish
+fisher z fzf done edc/bass omf/thefuck omf/theme-bobthefish done 0rax/fish-bd  edc/bass omf/thefuck omf/theme-bobthefish
 
 ## Disable powerline fonts & enable nerd for bobthefish
 set -g theme_powerline_fonts no
@@ -101,7 +99,6 @@ ghq get hashicorp/best-practices
 ## embulk
 brew cask install caskroom/versions/java8
 brew install embulk 
-
 
 
 # GitSetup
@@ -134,3 +131,23 @@ git clone git@github.com:morihaya/hoge-go.git
 
 # terraform
 brew install terraform
+
+# Visual Studio Code
+## basicaly setting
+    "terminal.external.osxExec": "iterm.app",
+    "terminal.integrated.fontFamily": "Knack Nerd Font"
+
+## Install plugin
++ VSCode extension for Ansible
+
+# nodejs
+#VSCode extension for Ansible1でremote shell機能を使うためにNodeJSが必要だった
+brew install nvm
+
+# golang
+brew install go
+sudo mkdir -m 775 /usr/local/go
+sudo chown $USER:admin /usr/local/go
+echo "set -x GOPATH /usr/local/go" >> ~/.config/fish/config.fish
+git config --global ghq.root $GOPATH/src
+
