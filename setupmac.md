@@ -96,10 +96,12 @@ wget https://raw.githubusercontent.com/docker/cli/master/contrib/completion/fish
 ghq get 2ndquadrant-it/barman
 ghq get hashicorp/best-practices
 
-## embulk
+## embulk & digdag
 brew cask install caskroom/versions/java8
-brew install embulk 
+brew install embulk digdag
 
+### digファイルをyamlハイライト有効
+echo "autocmd BufRead,BufNewFile *.dig set filetype=yaml" >> ~/.vimrc
 
 # GitSetup
 ## aliases
@@ -156,4 +158,21 @@ cp -p ~/.ghq/* $GOPATH/src
 
 ## VSC extentionでdockerを使った検証を行うためのマウント許可
 [docker]->[Preference]->[File Sharing]->[+]->[command + shift + G]->[/usr/local/go/src/]を追加->[Apply & Restart]
+
+# tmux
+brew install reattach-to-user-namespace
+
+
+string trim '
+setw -g mode-keys vi
+
+set-option -g default-command "exec reattach-to-user-namespace -l $SHELL"
+bind-key    -T copy-mode-vi v     send-keys -X begin-selection
+bind-key    -T copy-mode-vi y     send-keys -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
+bind-key    -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
+' > ~/.tmux.conf
+
+
+
+
 
