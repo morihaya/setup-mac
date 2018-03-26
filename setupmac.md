@@ -8,7 +8,7 @@
 [設定]->[アクセシビリティ]->[ズーム機能]->[キーボードショートカットを使ってズーム]
 
 # BrewSetup
-brew install tmux vim git 
+brew install tmux vim git git-flow
 brew install ghq htop ack pstree
 brew install thefuck terraform
 
@@ -80,7 +80,7 @@ chsh -s /usr/local/bin/fish
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 
 brew install fzf
-fisher z fzf done edc/bass omf/thefuck omf/theme-bobthefish done 0rax/fish-bd  edc/bass omf/thefuck omf/theme-bobthefish
+fisher z fzf done edc/bass omf/thefuck omf/theme-bobthefish done 0rax/fish-bd  edc/bass omf/thefuck omf/theme-bobthefish omf/git-flow
 
 ## Disable powerline fonts & enable nerd for bobthefish
 set -g theme_powerline_fonts no
