@@ -12,7 +12,6 @@ Option/Alt + TABによるWIndow切り替えが可能となるツール
 + 2018/03/27時点でbetaのためか、brewcaskにはなかった
 + 管理者権限による承認を必要とする
 
-
 # ズーム機能を有効
 [設定]->[アクセシビリティ]->[ズーム機能]->[キーボードショートカットを使ってズーム]
 
@@ -181,7 +180,6 @@ bind-key    -T copy-mode-vi y     send-keys -X copy-pipe-and-cancel "reattach-to
 bind-key    -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
 ' > ~/.tmux.conf
 
-
-
-
-
+# clipy
+クリップボードの履歴を一覧化して取り出せるスニペットアプリを導入
+brew cask install clipy
