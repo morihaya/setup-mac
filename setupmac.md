@@ -1,8 +1,17 @@
 # hostname変更
 [設定]->[共有]->[コンピュータ名を編集]
 
-# caps lock keyをコマンドキーへ
+# caps lock keyとcommandキーを入れ替え
+#TABによるウィンドウ切り替えが大変辛いため
 [設定]->[キーボード]->[修飾キー]->[CapsLockをCommandへ]
+
+## HyperSwitchをインストール
+Option/Alt + TABによるWIndow切り替えが可能となるツール
+
+[HyperSwitch](https://bahoom.com/hyperswitch)からDownload
++ 2018/03/27時点でbetaのためか、brewcaskにはなかった
++ 管理者権限による承認を必要とする
+
 
 # ズーム機能を有効
 [設定]->[アクセシビリティ]->[ズーム機能]->[キーボードショートカットを使ってズーム]
