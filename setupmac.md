@@ -70,14 +70,31 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
-" ~/.vimrc
 
+autocmd BufRead,BufNewFile *.dig set filetype=yaml
+
+syntax enable
+set background=dark
+colorscheme solarized
+
+if &diff
+    colorscheme default
+    hi DiffAdd    ctermfg=black ctermbg=2
+    hi DiffChange ctermfg=black ctermbg=3
+    hi DiffDelete ctermfg=black ctermbg=6
+    hi DiffText   ctermfg=black ctermbg=7
+endif
+" > ~/.vimrc
 ln -s ~/.vimrc ~/.config/nvim/init.vim
 
+## Install vim plugins
+vim
+-> :PlugInstall
 
 # fisher
 brew install fish
