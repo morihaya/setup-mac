@@ -16,9 +16,9 @@ Option/Alt + TABによるWIndow切り替えが可能となるツール
 [設定]->[アクセシビリティ]->[ズーム機能]->[キーボードショートカットを使ってズーム]
 
 # BrewSetup
-brew install tmux vim git git-flow
+brew install tmux vim neovim git git-flow
 brew install ghq htop ack pstree
-brew install thefuck terraform
+brew install thefuck terraform httpie
 
 ## install python
 brew install python
@@ -100,6 +100,11 @@ vim
 brew install fish
 echo /usr/local/bin/fish >> /etc/shells
 chsh -s /usr/local/bin/fish
+
+## ss command for mac
+echo "alias ss 'lsof -nPl -iTCP -sTCP:LISTEN'
+" >> ~/.config/fish/config.fish
+
 
 ## fisherman install
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
@@ -198,5 +203,9 @@ bind-key    -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "reattach-to
 ' > ~/.tmux.conf
 
 # clipy
-クリップボードの履歴を一覧化して取り出せるスニペットアプリを導入
+#クリップボードの履歴を一覧化して取り出せるスニペットアプリを導入
 brew cask install clipy
+
+# iina
+#moden video player
+brew cask install iina
