@@ -1,9 +1,16 @@
 # hostname変更
 [設定]->[共有]->[コンピュータ名を編集]
 
-# caps lock keyとcommandキーを入れ替え
+# 入力キーの設定
+## caps lock keyとcommandキーを入れ替え
 #TABによるウィンドウ切り替えが大変辛いため
 [設定]->[キーボード]->[修飾キー]->[CapsLockをCommandへ]
+
+## backslash
+[設定]->[キーボード]->[入力ソース]->[¥キーで入力する文字]を「\（バックスラッシュ）」に変更
+
+参考：[Macにおけるバックスラッシュ（\）の入力方法](https://qiita.com/miyohide/items/6cb8967282d4b2db0f61)
+
 
 ## HyperSwitchをインストール
 Option/Alt + TABによるWIndow切り替えが可能となるツール
