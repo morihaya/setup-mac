@@ -171,6 +171,9 @@ brew install terraform
 
 ## Install plugin
 + VSCode extension for Ansible
++ Go
++ Partial Diff
++ vscode-digdag
 
 # nodejs
 #VSCode extension for Ansible1でremote shell機能を使うためにNodeJSが必要だった
