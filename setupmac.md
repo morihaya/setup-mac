@@ -24,7 +24,7 @@ Option/Alt + TABによるWIndow切り替えが可能となるツール
 
 # BrewSetup
 brew install tmux vim neovim git git-flow
-brew install ghq htop ack pstree
+brew install ghq htop ack pstree pv
 brew install thefuck terraform httpie
 
 ## install python
