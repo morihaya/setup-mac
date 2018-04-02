@@ -219,3 +219,6 @@ brew cask install clipy
 # iina
 #moden video player
 brew cask install iina
+
+# skype for mac
+brew cask install skype
