@@ -292,3 +292,8 @@ brew cask install iina
 ```
 brew cask install skype
 ```
+
+# pubric cloud shell
+## GCP
+brew cask install google-cloud-sdk
+gcloud init
