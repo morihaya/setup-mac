@@ -297,3 +297,6 @@ brew cask install skype
 ## GCP
 brew cask install google-cloud-sdk
 gcloud init
+
+# android-file-transfer
+brew cask install android-file-transfer
